@@ -1,14 +1,13 @@
 from django.contrib.auth.forms import UserChangeForm
-from django.contrib.auth import get_user_model, update_session_auth_hash
+from django.contrib.auth import get_user_model
 from django import forms
 from django.contrib.auth import password_validation
 from django.core.exceptions import ValidationError
-from django.contrib.auth.forms import PasswordChangeForm, SetPasswordForm
+
 from .apps import user_registered
 
 
 class AccountRegistrationForm(forms.ModelForm):
-    # username = forms.CharField(label='Имя пользователя:')
     email = forms.EmailField(label='E-Mail')
     password1 = forms.CharField(
         label='Пароль:',
@@ -76,5 +75,3 @@ class AccountUpdateForm(UserChangeForm):
             'city',
             'avatar',
         ]
-
-
