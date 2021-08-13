@@ -1,3 +1,4 @@
+
 from django.template.loader import render_to_string
 from django.core.signing import Signer
 from app.settings import ALLOWED_HOSTS
