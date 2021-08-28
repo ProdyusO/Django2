@@ -5,6 +5,7 @@ from .models import Choice, Question
 
 from collections import Counter
 
+
 class ChoiceInlineFormSet(BaseInlineFormSet):
     def clean(self):
         # lst = []
